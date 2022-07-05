@@ -208,12 +208,22 @@ module.exports = configure(function (ctx) {
 
       builder: {
         // https://www.electron.build/configuration/configuration
-        appId: 'showwatch',
+        appId: 'showwatch2',
         mac: {
           target: {
             target: 'default',
             arch: ['x64', 'arm64']
           }
+        },
+        win: {
+          target: {
+            target: 'nsis',
+            arch: ['x64', 'ia32']
+          }
+        },
+        nsis: {
+          oneClick: false,
+          allowToChangeInstallationDirectory: true
         }
       },
 
